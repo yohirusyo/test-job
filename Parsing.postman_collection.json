@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "b746a3a4-fae3-4000-b45a-49c5117eed6a",
+		"name": "Parsing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15688770"
+	},
+	"item": [
+		{
+			"name": "Registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"email\": \"client@example.com\",\r\n\t\"password\": \"test123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/auth/register",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"email\": \"ADMIN@example.com\",\r\n\t\"password\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "stopParse",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjI2NDYwM2ZkLThlYmItNGUwNS05M2E4LTI1ODNlZDQ3NDk1NyIsImVtYWlsIjoiQURNSU5AZXhhbXBsZS5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NTgyNDk4MTAsImV4cCI6MTY1ODMzNjIxMH0.ZQCH1YqjUdixwu4EFYXYzRXqsgO2Q1X6Y_xV-2Wknys",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/stopParse",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"stopParse"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "startParse",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjI2NDYwM2ZkLThlYmItNGUwNS05M2E4LTI1ODNlZDQ3NDk1NyIsImVtYWlsIjoiQURNSU5AZXhhbXBsZS5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NTgyNDk4MTAsImV4cCI6MTY1ODMzNjIxMH0.ZQCH1YqjUdixwu4EFYXYzRXqsgO2Q1X6Y_xV-2Wknys",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/startParse",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"startParse"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

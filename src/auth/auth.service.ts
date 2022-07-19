@@ -7,7 +7,6 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { User } from 'src/user/entities/user.entity';
 import { EntityNotFoundError, Repository } from 'typeorm';
 import { TokenWithUserPayload, UserCredentialsDto } from './dto';
-import {} from 'bcryptjs';
 import { JwtService } from '@nestjs/jwt';
 import { instanceToPlain } from 'class-transformer';
 

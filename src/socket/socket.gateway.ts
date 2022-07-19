@@ -1,6 +1,5 @@
 import { WebSocketGateway, WebSocketServer } from '@nestjs/websockets';
 import { Server } from 'socket.io';
-import { Public } from 'src/common/decorators';
 
 @WebSocketGateway({
   path: '/api/ws',

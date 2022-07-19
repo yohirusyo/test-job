@@ -2,7 +2,6 @@ import { Controller, Post, Body } from '@nestjs/common';
 import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
 import { Public } from 'src/common/decorators';
 import { CreateUserDto, UserPayload } from '../user/dto';
-import { User } from '../user/entities/user.entity';
 import { UserService } from '../user/user.service';
 import { AuthService } from './auth.service';
 import { TokenWithUserPayload, UserCredentialsDto } from './dto';
