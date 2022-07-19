@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script type="module">
+      import { io } from 'https://cdn.socket.io/4.4.1/socket.io.esm.min.js';
+      const socket = io('ws://127.0.0.1:3000', {
+        path: '/api/ws',
+      });
+
+      socket.on('parsing', (message) => {
+        document.getElementsByTagName('pre')[0].textContent = JSON.stringify(
+          message,
+          null,
+          4,
+        );
+      });
+    </script>
+  </head>
+  <body>
+    <pre></pre>
+  </body>
+</html>

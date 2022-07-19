@@ -1,0 +1,33 @@
+db:
+  type: 'postgres'
+  host: 'localhost'
+  port: 5432
+  database: 'test-job'
+  username: 'postgres'
+  password: 'root'
+
+jwt:
+  secret: 'super_secret_key_for_jwt'
+  expires: '1d'
+
+
+parsing_target:
+  active_from_start: false
+  name: 'TINKOFF#1'
+  url: 'https://garantex.io/p2p'
+  params:
+    - utf8: '✓'
+    - payment_method: 'Тинькофф'
+    - amount: 200000
+    - currency: 'RUB' 
+    - commit: 'Поиск'
+  container: '.table.table-condensed.table-striped.sell_table > tbody'
+  fields:
+    - description: 'seller'
+      value: 'td:nth-child(1) > div > a'
+    - description: 'paymentMethod'
+      value: 'td:nth-child(2) > div'
+    - description: 'price'
+      value: 'td:nth-child(3)'
+    - description: 'sum'
+      value: 'td:nth-child(4)'
